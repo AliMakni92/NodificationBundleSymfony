@@ -1,0 +1,24 @@
+{
+    "name": "gfs/notifications",
+    "version": "v1.0.2",
+    "description": "Symfony GFSNotificationsBundle",
+    "keywords": ["User notifications"],
+    "license": "MIT",
+    "homepage": "https://github.com/groupfivesoftware",
+    "authors": [
+        {
+            "name": "Group Five Software",
+            "email": "office@groupfivesoftware.com"
+        }
+    ],
+    "require": {
+        "php": ">= 5.3.9",
+        "symfony/security-bundle": "~2.3|~3.0",
+        "symfony/framework-bundle": "~2.3|~3.0",
+        "cboden/ratchet": "0.3.*",
+        "doctrine/orm": "*"
+    },
+    "autoload": {
+        "psr-4": { "GFS\\NotificationBundle\\": "" }
+    }
+}

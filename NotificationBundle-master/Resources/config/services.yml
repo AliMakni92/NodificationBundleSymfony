@@ -1,0 +1,14 @@
+services:
+#    notification.example:
+#        class: NotificationBundle\Example
+#        arguments: ["@service_id", "plain_value", %parameter%]
+    notification.helper:
+        class: GFS\NotificationBundle\Services\NotificationHelper
+        arguments: [ "@service_container" ]
+
+    notification.post.persist:
+        class: GFS\NotificationBundle\EventListener\PostPersistNotification
+        arguments: [ "@notification.helper" ]
+        tags:
+            - { name: doctrine.event_listener, event: postPersist, method: postPersist }
+            - { name: doctrine.event_listener, event: postUpdate, method: postUpdate }
